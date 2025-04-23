@@ -76,3 +76,6 @@ model.train(X_train, y_train, epochs=2000)
 preds = model.predict(X_test)
 accuracy = np.mean(preds == y_test)
 print(f"Test Accuracy: {accuracy*100:.2f}%")
+# Save the trained model
+np.savez("softmax_model3.npz", W=model.W, b=model.b)
+print("Model saved as softmax_model.npz 🎉")
